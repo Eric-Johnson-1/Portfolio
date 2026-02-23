@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eric Johnson | Web3 Full-Stack Engineer — Smart Contracts, DeFi, DAO, ERC-4337</title>
+    
+    <!-- Preconnect & Preload for Performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" as="style" />
+    <link rel="preload" href="styles.css" as="style" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+    
+    <!-- Core Technical SEO & Canonical -->
+    <meta name="description" content="Web3 Full-Stack Software Engineer specializing in Solidity, Foundry, ERC-4337 Account Abstraction, and EIP-7201 UUPS proxies. Architected 30+ smart contracts via 100% on-chain verified mechanics." />
+    <meta name="keywords" content="Web3, Solidity, Smart Contracts, Full-Stack, Ethereum, DeFi, DAO, ERC-4337, Account Abstraction, ERC-5192, SBT, UUPS, Foundry, Blockchain Developer, L2, Base, React" />
+    <meta name="author" content="Eric Johnson" />
+    <link rel="canonical" href="https://Eric-Johnson-1.github.io/Portfolio/" />
+    
+    <!-- Apple iOS / PWA Immersive Web App Meta Tags -->
+    <link rel="apple-touch-icon" href="https://Eric-Johnson-1.github.io/Portfolio/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Discord & IM Highlighting (Cyberpunk Blue) -->
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Open Graph SEO (LinkedIn, Discord, Telegram, Slack Rich Cards) -->
+    <meta property="og:title" content="Eric Johnson | Web3 Full-Stack Engineer — Smart Contracts, DeFi, DAO, ERC-4337" />
+    <meta property="og:description" content="Architected 30+ Solidity smart contracts and shipped 4+ production-grade dApps. Secured by Foundry with 650+ invariant/fuzz tests. 100% on-chain mechanics verification." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://Eric-Johnson-1.github.io/Portfolio/" />
+    <meta property="og:site_name" content="Eric Johnson Web3 Portfolio" />
+    <meta property="og:image" content="https://Eric-Johnson-1.github.io/Portfolio/og-cyber-portfolio.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:secure_url" content="https://Eric-Johnson-1.github.io/Portfolio/og-cyber-portfolio.png" />
+    <meta property="og:image:alt" content="Eric Johnson - Web3 Portfolio Architecture Preview" />
+    
+    <!-- Slack Specific Parsing Fallbacks -->
+    <meta name="twitter:label1" content="Role" />
+    <meta name="twitter:data1" content="Web3 Full-Stack Engineer" />
+    <meta name="twitter:label2" content="Tech Stack" />
+    <meta name="twitter:data2" content="Solidity, Foundry, ERC-4337, EIP-7201 UUPS, Next.js, Hono, Drizzle ORM, The Graph" />
+
+    <!-- Twitter / X Cards (For flawless timeline embedding) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eric Johnson | Web3 Full-Stack Engineer — Smart Contracts, DeFi, DAO, ERC-4337" />
+    <meta name="twitter:description" content="Builder of censorship-resistant systems, gas-optimized storage (EIP-7201 UUPS), ERC-4337 account abstraction, and complex on-chain DAO protocols." />
+    <meta name="twitter:image" content="https://Eric-Johnson-1.github.io/Portfolio/og-cyber-portfolio.png" />
+    <meta name="twitter:image:alt" content="Eric Johnson - Senior Web3 Engineer Cyberpunk Portfolio" />
+    
+    <!-- Preload Critical Render-Blocking Resources (Lighthouse Optimization) -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"></noscript>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://Eric-Johnson-1.github.io/Portfolio/#person",
+            "name": "Eric Johnson",
+            "jobTitle": "Web3 Full-Stack Software Engineer",
+            "description": "Architected 30+ Solidity smart contracts and shipped 4+ production-grade dApps across DeFi, NFT, DAO governance, and healthcare.",
+            "url": "https://Eric-Johnson-1.github.io/Portfolio/",
+            "sameAs": [
+              "https://github.com/Eric-Johnson-1"
+            ],
+            "knowsAbout": [
+              "Solidity",
+              "Foundry",
+              "Ethereum",
+              "Smart Contracts",
+              "ERC-4337 Account Abstraction",
+              "ERC-5192 Soulbound Tokens",
+              "UUPS-upgradeable systems",
+              "EIP-7201 Namespaced Storage",
+              "React",
+              "Next.js",
+              "TypeScript"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://Eric-Johnson-1.github.io/Portfolio/#website",
+            "url": "https://Eric-Johnson-1.github.io/Portfolio/",
+            "name": "Eric Johnson | Web3 Portfolio",
+            "publisher": {
+              "@id": "https://Eric-Johnson-1.github.io/Portfolio/#person"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <!-- Fallback for browsers with JavaScript disabled -->
+    <noscript>
+      <div style="background: rgba(220, 38, 38, 0.1); color: #ef4444; padding: 12px; text-align: center; font-size: 0.95rem; border-bottom: 1px solid rgba(220, 38, 38, 0.2); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 9999;">
+        <strong>Notice:</strong> JavaScript is currently disabled in your browser. Interactive features like theme toggles, animations, and mobile menus are disabled, but the <strong>core resume content remains fully accessible</strong>.
+      </div>
+      <style>
+        /* Hide JS-dependent interactive buttons and particles */
+        .theme-toggle, .mobile-nav-toggle, .bg-particles { display: none !important; }
+      </style>
+    </noscript>
+
+    <div class="noise" aria-hidden="true"></div>
+    <!-- Animated background particles -->
+    <div class="bg-particles" id="particles" aria-hidden="true"></div>
+
+    <div class="container">
+      <!-- Header Section -->
+      <header class="glass-card hero-header">
+        <div class="profile-section">
+          <div class="profile-image" aria-hidden="true">
+            <div class="avatar">
+              <span class="avatar-text">EJ</span>
+              <div class="avatar-ring"></div>
+            </div>
+          </div>
+          <div class="profile-details">
+            <div class="title-wrapper">
+              <h1>Eric Johnson</h1>
+              <span class="status-badge"
+                ><span class="status-dot"></span> Open to Work</span
+              >
+            </div>
+            <h2>Web3 Full-Stack Software Engineer</h2>
+            <p class="tagline">
+              Architecting secure, gas-optimized smart contract systems and
+              shipping full-stack dApps on Ethereum L2s
+            </p>
+            <div class="hero-links-grid">
+              <a
+                href="mailto:eric.johnson.dev123@gmail.com"
+                class="contact-item"
+                aria-label="Email"
+              >
+                <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                <span>eric.johnson.dev123@gmail.com</span>
+              </a>
+              <a
+                href="https://Eric-Johnson-1.github.io/Portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item"
+                aria-label="Portfolio"
+              >
+                <i class="bi bi-globe2" aria-hidden="true"></i>
+                <span>Eric-Johnson-1.github.io/Portfolio</span>
+              </a>
+              <a
+                href="https://github.com/Eric-Johnson-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item"
+                aria-label="GitHub"
+              >
+                <i class="bi bi-github" aria-hidden="true"></i>
+                <span>github.com/Eric-Johnson-1</span>
+              </a>
+              <a 
+                href="https://Eric-Johnson-1.github.io/Portfolio/Eric-Johnson-RemoteWeb3FullStackDeveloper-Printable-Resume.html" 
+                class="contact-item resume-highlight" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Printable HTML Resume"
+              >
+                <i class="bi bi-file-earmark-pdf-fill" aria-hidden="true"></i>
+                <span class="highlight-text">View Printable Resume</span>
+              </a>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Years Dev</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">Smart Contracts</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">650+</span>
+                <span class="stat-label">Tests Passing</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4+</span>
+                <span class="stat-label">dApps Shipped</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation — Experience first for recruiter priority -->
+      <nav class="glass-nav" id="mainNav">
+        <ul>
+          <li>
+            <a href="#about" class="active"
+              ><i class="bi bi-person-fill"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="#experience"
+              ><i class="bi bi-briefcase-fill"></i> Experience</a
+            >
+          </li>
+          <li>
+            <a href="#projects"
+              ><i class="bi bi-rocket-takeoff-fill"></i> Projects</a
+            >
+          </li>
+          <li>
+            <a href="#skills"><i class="bi bi-gear-fill"></i> Skills</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="bi bi-chat-dots-fill"></i> Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main id="main">
+        <!-- About Section -->
+        <section id="about" class="glass-card section-card">
+          <h2 class="section-title">
+            <i class="bi bi-person-fill"></i> About Me
+          </h2>
+          <div class="section-content">
+            <p>
+              Web3 Full-Stack Software Engineer who has
+              <strong>architected 30+ Solidity smart contracts</strong> and
+              <strong>shipped 4+ production-grade dApps</strong> across DeFi, NFT, DAO
+              governance, and healthcare. Backed by strictly enforced security standards,
+              establishing <strong>100% on-chain core mechanics verification</strong> via
+              comprehensive <strong>Foundry</strong> test suites (<strong>650+ invariant, fuzz, and unit tests</strong>).
+            </p>
+            <p>
+              3+ years of remote Web3 experience spanning
+              <strong>UUPS-upgradeable</strong> contract systems
+              (<strong>EIP-7201</strong>), <strong>ERC-4337</strong> account
+              abstraction with gasless onboarding, and
+              <strong>ERC-5192</strong> Soulbound Token architectures, plus 2
+              years of Web2 full-stack development.
+            </p>
+            <p>
+              Deep expertise in building <strong>censorship-resistant</strong> systems (Merkle
+              proof + IPFS anti-censorship whitelists), <strong>on-chain governance</strong>
+              (Governor + Timelock + quadratic funding), and <strong>gas-optimized</strong>
+              storage layouts. Passionate about bridging complex blockchain
+              infrastructure with intuitive <strong>user experiences</strong> through account
+              abstraction and <strong>thoughtful UX</strong> design.
+            </p>
+          </div>
+        </section>
+
+        <!-- Experience Section — Moved before Projects for recruiter priority -->
+        <section id="experience" class="glass-card section-card">
+          <h2 class="section-title">
+            <i class="bi bi-briefcase-fill"></i> Professional Experience
+          </h2>
+          <div class="section-content">
+            <div class="timeline">
+              <!-- Experience 1: Bianjie.AI — Nebula Launchpad -->
+              <article class="timeline-item">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <time class="timeline-date" datetime="2023-02">2023.02 - Present</time>
+                <div class="timeline-content glass-inner-card">
+                  <h3>Web3 Full-Stack Software Engineer</h3>
+                  <h4>Bianjie.AI | Remote — Enterprise IDO Platform</h4>
+                  <div class="badges" aria-label="Technologies used">
+                    <span class="badge">Solidity</span>
+                    <span class="badge">UUPS</span>
+                    <span class="badge">EIP-7201</span>
+                    <span class="badge">Foundry</span>
+                    <span class="badge">Next.js</span>
+                    <span class="badge">Wagmi</span>
+                    <span class="badge">Viem</span>
+                    <span class="badge">Hono</span>
+                    <span class="badge">The Graph</span>
+                    <span class="badge">Turborepo</span>
+                    <span class="badge">Bun</span>
+                    <span class="badge">Drizzle ORM</span>
+                    <span class="badge">PostgreSQL</span>
+                    <span class="badge">IPFS</span>
+                    <span class="badge">Zod</span>
+                  </div>
+                  <ul>
+                    <li>
+                      Architected
+                      <strong>5 UUPS-upgradeable contracts</strong>
+                      (SalesFactory, Sale, AllocationStaking, FarmingNBL,
+                      Vesting) with <strong>EIP-7201</strong> namespaced
+                      storage, ReentrancyGuard, and Pausable emergency controls
+                      for upgrade-safe, production-grade IDO infrastructure.
+                    </li>
+                    <li>
+                      Engineered
+                      <strong>Create2 deterministic clone deployment</strong>
+                      via <code>Clones.cloneDeterministic</code>, enabling
+                      predictable Sale contract addresses pre-deployment and
+                      <strong>gas-efficient factory-pattern</strong> IDO launches.
+                    </li>
+                    <li>
+                      Designed a
+                      <strong
+                        >Merkle proof + IPFS anti-censorship whitelist</strong
+                      >
+                      system: backend generates Merkle trees, uploads to
+                      IPFS, stores <strong>roots on-chain</strong> —
+                      frontend implements
+                      <strong>TanStack Query dual-source fallback</strong> (API
+                      → IPFS) for trustless participation if backend goes
+                      offline.
+                    </li>
+                    <li>
+                      Built <strong>MasterChef V2-style LP farming</strong>
+                      (FarmingNBL) with multi-pool
+                      <code>allocPoint</code> weighting, time-weighted
+                      <code>accNblPerShare</code> rewards, external
+                      <code>IRewarder</code> plugin interface, duplicate LP
+                      detection, and balance-capped safe distribution.
+                    </li>
+                    <li>
+                      Implemented <strong>per-user Vesting deployment</strong>
+                      on token claim: Sale dynamically deploys individual
+                      Vesting contracts with configurable linear release,
+                      <code>immutable</code> fields, SafeERC20, and
+                      owner-recoverable <code>recoverERC20</code> safety.
+                    </li>
+                    <li>
+                      Developed the
+                      <strong>Hono + Drizzle ORM backend</strong>
+                      (TypeScript/Bun) with RESTful CRUD, Merkle tree
+                      generation, IPFS upload, Zod
+                      validation, Bearer auth middleware, and PostgreSQL with
+                      upsert conflict resolution.
+                    </li>
+                    <li>
+                      Deployed a <strong>Graph Protocol subgraph</strong>
+                      indexing 4 entity types with
+                      <code>@derivedFrom</code> relationships and dynamic data
+                      source templates, replacing expensive on-chain
+                      enumeration.
+                    </li>
+                    <li>
+                      Built the <strong>Next.js frontend</strong> with Wagmi
+                      / Viem for type-safe contract interactions, reactive
+                      on-chain state via TanStack Query, and responsive
+                      glassmorphism UI with Tailwind CSS.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Experience 2: TheOne.art -->
+              <article class="timeline-item">
+                <div class="timeline-dot" aria-hidden="true"></div>
+                <time class="timeline-date" datetime="2022-02">2022.02 - 2023.02</time>
+                <div class="timeline-content glass-inner-card">
+                  <h3>Web3 Full-Stack Software Engineer</h3>
+                  <h4>TheOne.art | Remote</h4>
+                  <div class="badges" aria-label="Technologies used">
+                    <span class="badge">Solidity</span>
+                    <span class="badge">ERC-721A</span>
+                    <span class="badge">EIP-712</span>
+                    <span class="badge">OpenZeppelin</span>
+                    <span class="badge">The Graph</span>
+                    <span class="badge">IPFS</span>
+                    <span class="badge">Node.js</span>
+                    <span class="badge">Express.js</span>
+                    <span class="badge">React</span>
+                    <span class="badge">Ethers.js</span>
+                  </div>
+                  <ul>
+                    <li>
+                      Engineered a high-performance <strong>NFT marketplace</strong> supporting primary issuance and secondary trading, leveraging <strong>ERC721A</strong> to achieve gas-optimized batch minting operations.
+                    </li>
+                    <li>
+                      Architected a decentralized order book using <strong>EIP-712</strong> typed data signatures, enabling gasless off-chain maker order placements with atomic on-chain taker matching.
+                    </li>
+                    <li>
+                      Developed comprehensive <strong>Subgraph (The Graph)</strong> indexing for complex marketplace events (listings, bids, sales, cancellations), reducing frontend query latency by removing on-chain RPC bottlenecks.
+                    </li>
+                    <li>
+                      Designed an automated hybrid storage pipeline utilizing <strong>IPFS</strong> for decentralized metadata pinning combined with a robust <strong>Node.js/Express.js</strong> backend for rapid off-chain asset aggregation.
+                    </li>
+                    <li>
+                      Implemented diverse wallet standard support (MetaMask, WalletConnect) with Ethers.js, driving strict security patterns including <code>ReentrancyGuard</code> and pull-over-push fund distribution mechanisms.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="glass-card section-card">
+          <h2 class="section-title">
+            <i class="bi bi-rocket-takeoff-fill"></i> Personal Projects
+          </h2>
+          <div class="section-content">
+            <div class="projects-grid">
+              <!-- Project 1: HopeDAO -->
+              <article class="project-card glass-inner-card" data-project="hopedao">
+                <div class="project-icon" aria-hidden="true">💚</div>
+                <header class="project-header">
+                  <h3>HopeDAO</h3>
+                  <span class="project-type">DAO · Crowdfunding · DeFi</span>
+                </header>
+                <p class="project-description">
+                  Decentralized mutual aid crowdfunding DAO on
+                  <strong>Base L2</strong> with transparent, community-governed
+                  milestone-based fund release and quadratic funding matching.
+                </p>
+
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >14 Solidity source files across 5 modules (core,
+                      governance, token, account abstraction, libraries)</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      ><strong>ERC-4337</strong> gasless onboarding — Smart
+                      Account (<strong>ERC-7821</strong> batched execution +
+                      <strong>ERC-1271</strong> signature validation) + Factory
+                      (Create2) + Paymaster with per-user/global daily gas
+                      limits and <code>postOp</code> precise gas refund</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      ><strong>Quadratic funding</strong> (CLR matching)
+                      algorithm in Solidity library — Babylonian-method integer
+                      sqrt with <strong>1e18 fixed-point precision</strong></span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Governor + Timelock governance with
+                      <strong>verifier staking, slashing</strong>,
+                      cooldown-based unstaking, and on-chain reputation
+                      scoring</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >ERC-1155 Soulbound donation receipt NFTs ·
+                      Milestone-based fund release with IPFS evidence · Treasury
+                      fee deduction (configurable basis points)</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-shield-check"></i>
+                    <span
+                      ><strong>249 tests passing</strong> (10 suites, including
+                      fuzz tests) with Foundry</span
+                    >
+                  </div>
+                </div>
+
+                <div class="badges">
+                  <span class="badge">Solidity</span>
+                  <span class="badge">Foundry</span>
+                  <span class="badge">ERC-4337</span>
+                  <span class="badge">ERC-7821</span>
+                  <span class="badge">OpenZeppelin</span>
+                  <span class="badge">Next.js</span>
+                  <span class="badge">Wagmi</span>
+                  <span class="badge">Hono</span>
+                  <span class="badge">Drizzle ORM</span>
+                  <span class="badge">PostgreSQL</span>
+                  <span class="badge">Turborepo</span>
+                  <span class="badge">Bun</span>
+                  <span class="badge accent">Base L2</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Eric-Johnson-1/HopeDAO"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="glass-button"
+                    ><i class="bi bi-github" aria-hidden="true"></i> Source Code</a
+                  >
+                </div>
+              </article>
+
+              <!-- Project 2: MedBadge -->
+              <article class="project-card glass-inner-card" data-project="medbadge">
+                <div class="project-icon" aria-hidden="true">💉</div>
+                <header class="project-header">
+                  <h3>MedBadge</h3>
+                  <span class="project-type">Healthcare · SBT · Privacy</span>
+                </header>
+                <p class="project-description">
+                  Blockchain-based vaccination record management system using
+                  <strong>Soulbound Tokens (ERC-5192)</strong> with
+                  GDPR-compliant encrypted data storage on
+                  <strong>Base L2</strong>.
+                </p>
+
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Storage-optimized <code>VaccinationRecord</code> struct
+                      (35 bytes / 2 slots) —
+                      <strong>~60% gas savings</strong> vs naïve uint256
+                      implementation</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Hybrid on-chain/off-chain architecture with
+                      AES-256-GCM encryption for PII on IPFS ·
+                      <strong>GDPR compliance</strong> via unpin + key destruction</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      ><strong
+                        >Two-tier institution-based registrar management</strong
+                      >
+                      (<code>Ownable2Step</code>): Phase 1 owner-direct → Phase
+                      2 institution admin self-governance with active-flag
+                      cascade deactivation</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Batch revocation (up to 200/tx) with
+                      <code>delete</code> storage reclaim for Gas refunds ·
+                      <code>reinstateRecord</code> for error correction · Full
+                      on-chain audit trail</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Dynamic badge rendering (Satori + Sharp, SVG → PNG/WebP)
+                      with OpenSea-compatible metadata · Gamified user level
+                      system (Bronze → Diamond)</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-shield-check"></i>
+                    <span
+                      ><strong>119 tests passing</strong> (unit + fuzz +
+                      integration) · The Graph subgraph ·
+                      <strong>9 languages</strong> i18n</span
+                    >
+                  </div>
+                </div>
+
+                <div class="badges">
+                  <span class="badge">Solidity</span>
+                  <span class="badge">Foundry</span>
+                  <span class="badge">ERC-5192</span>
+                  <span class="badge">Ownable2Step</span>
+                  <span class="badge">Next.js</span>
+                  <span class="badge">Wagmi</span>
+                  <span class="badge">ConnectKit</span>
+                  <span class="badge">Hono</span>
+                  <span class="badge">The Graph</span>
+                  <span class="badge">IPFS</span>
+                  <span class="badge">Upstash Redis</span>
+                  <span class="badge">Bun</span>
+                  <span class="badge accent">Base L2</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Eric-Johnson-1/MedBadge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="glass-button"
+                    ><i class="bi bi-github" aria-hidden="true"></i> Source Code</a
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Commercial Projects Section -->
+        <section id="commercial-projects" class="glass-card section-card">
+          <h2 class="section-title">
+            <i class="bi bi-building"></i> Commercial Projects
+          </h2>
+          <div class="section-content">
+            <div class="projects-grid">
+              <!-- Enterprise IDO Platform -->
+              <article class="project-card glass-inner-card" data-project="enterprise-ido">
+                <div class="project-icon" aria-hidden="true">🚀</div>
+                <header class="project-header">
+                  <h3>Enterprise-Grade Token Launchpad</h3>
+                  <span class="project-type">IDO · DeFi · Access Control</span>
+                </header>
+                <p class="project-description">
+                  Production decentralized IDO platform with staking-based
+                  allocation, LP yield farming, and
+                  <strong>censorship-resistant</strong> Merkle proof + IPFS
+                  whitelist verification.
+                </p>
+
+                <div class="project-highlights">
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >5 <strong>UUPS-upgradeable</strong> contracts with
+                      <strong>EIP-7201</strong> namespaced storage, Create2
+                      deterministic cloning, and on-chain safety invariant
+                      checks</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >MasterChefV2-style LP farming with multi-pool
+                      allocation, <code>IRewarder</code> plugin interface,
+                      duplicate LP detection, and balance-capped safe
+                      distribution</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Merkle proof + IPFS whitelist — frontend
+                      <strong>dual-source fallback</strong> (API → IPFS +
+                      on-chain hash) for full decentralization</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Per-user Vesting contract deployment with configurable
+                      linear release, immutable fields, and owner-recoverable
+                      ERC20 safety</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Hono + Drizzle ORM + Zod validation backend · Graph
+                      Protocol subgraph with 4 entity types and dynamic data
+                      source templates</span
+                    >
+                  </div>
+                  <div class="highlight-item">
+                    <i class="bi bi-shield-check"></i>
+                    <span
+                      ><strong>166 tests</strong> · Pausable · ReentrancyGuard ·
+                      <code>min(unsold, balance)</code> safe withdrawal · <strong>C5
+                      balance invariant</strong></span
+                    >
+                  </div>
+                </div>
+
+                <div class="badges">
+                  <span class="badge">Solidity</span>
+                  <span class="badge">Foundry</span>
+                  <span class="badge">UUPS Proxy</span>
+                  <span class="badge">EIP-7201</span>
+                  <span class="badge">Create2</span>
+                  <span class="badge">Next.js</span>
+                  <span class="badge">Wagmi</span>
+                  <span class="badge">Hono</span>
+                  <span class="badge">Drizzle ORM</span>
+                  <span class="badge">The Graph</span>
+                  <span class="badge">Turborepo</span>
+                  <span class="badge">Bun</span>
+                  <span class="badge accent">EVM L2</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="glass-card section-card">
+          <h2 class="section-title">
+            <i class="bi bi-gear-fill"></i> Technical Skills
+          </h2>
+          <div class="section-content">
+            <div class="skills-container">
+              <!-- Blockchain & Smart Contracts -->
+              <article class="skill-category glass-inner-card">
+                <h3>
+                  <i class="bi bi-box-fill"></i> Blockchain & Smart Contracts
+                </h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Solidity</span>
+                  <span class="skill-tag">Foundry</span>
+                  <span class="skill-tag">OpenZeppelin</span>
+                  <span class="skill-tag">ERC-4337</span>
+                  <span class="skill-tag">ERC-5192</span>
+                  <span class="skill-tag">ERC-7821</span>
+                  <span class="skill-tag">ERC-1271</span>
+                  <span class="skill-tag">ERC-721A</span>
+                  <span class="skill-tag">EIP-712</span>
+                  <span class="skill-tag">ERC-1155</span>
+                  <span class="skill-tag">ERC-20</span>
+                  <span class="skill-tag">UUPS Proxy</span>
+                  <span class="skill-tag">EIP-7201</span>
+                  <span class="skill-tag">Gas Optimization</span>
+                  <span class="skill-tag">Merkle Proofs</span>
+                  <span class="skill-tag">Create2</span>
+                  <span class="skill-tag">DAO Governance</span>
+                  <span class="skill-tag">Quadratic Funding</span>
+                </div>
+              </article>
+
+              <!-- Frontend & Wallet -->
+              <article class="skill-category glass-inner-card">
+                <h3><i class="bi bi-window-stack"></i> Frontend & Wallet</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">TypeScript</span>
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">Next.js</span>
+                  <span class="skill-tag">Wagmi</span>
+                  <span class="skill-tag">Viem</span>
+                  <span class="skill-tag">RainbowKit</span>
+                  <span class="skill-tag">ConnectKit</span>
+                  <span class="skill-tag">Tailwind CSS</span>
+                  <span class="skill-tag">Radix UI</span>
+                  <span class="skill-tag">Framer Motion</span>
+                  <span class="skill-tag">Zustand</span>
+                  <span class="skill-tag">TanStack Query</span>
+                </div>
+              </article>
+
+              <!-- Backend & Infrastructure -->
+              <article class="skill-category glass-inner-card">
+                <h3><i class="bi bi-server"></i> Backend & Infrastructure</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Bun</span>
+                  <span class="skill-tag">Hono</span>
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">Express.js</span>
+                  <span class="skill-tag">Drizzle ORM</span>
+                  <span class="skill-tag">PostgreSQL</span>
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">The Graph</span>
+                  <span class="skill-tag">IPFS</span>
+                  <span class="skill-tag">Upstash Redis</span>
+                  <span class="skill-tag">Docker</span>
+                  <span class="skill-tag">Zod</span>
+                </div>
+              </article>
+
+              <!-- Tools & DevOps -->
+              <article class="skill-category glass-inner-card">
+                <h3><i class="bi bi-tools"></i> Tools & DevOps</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Turborepo</span>
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">GitHub Actions</span>
+                  <span class="skill-tag">Satori + Sharp</span>
+                  <span class="skill-tag">Ethereum L2s</span>
+                  <span class="skill-tag">Base</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Community & Interests Section -->
+        <section id="community" class="glass-card section-card">
+          <h2 class="section-title">
+            <i class="bi bi-people-fill"></i> Community & Interests
+          </h2>
+          <div class="section-content">
+            <div class="community-grid">
+              <article class="community-item glass-inner-card">
+                <i class="bi bi-discord community-icon" aria-hidden="true"></i>
+                <h3>Web3 Communities</h3>
+                <p>
+                  Active in Foundry, OpenZeppelin, and ERC-4337 Discord
+                  communities discussing smart contract security, account
+                  abstraction, and L2 scaling.
+                </p>
+              </article>
+              <article class="community-item glass-inner-card">
+                <i class="bi bi-github community-icon" aria-hidden="true"></i>
+                <h3>Open Source</h3>
+                <p>
+                  Building and open-sourcing full-stack dApps with focus on
+                  gas-optimized Solidity patterns and modern TypeScript tooling
+                  (Bun, Hono, Drizzle).
+                </p>
+              </article>
+              <article class="community-item glass-inner-card">
+                <i class="bi bi-globe2 community-icon" aria-hidden="true"></i>
+                <h3>Exploration</h3>
+                <p>
+                  Exploring emerging token standards (ERC-5192, ERC-7821),
+                  decentralized governance, quadratic funding, and token
+                  engineering.
+                </p>
+              </article>
+              <article class="community-item glass-inner-card">
+                <i class="bi bi-bicycle community-icon" aria-hidden="true"></i>
+                <h3>Lifestyle</h3>
+                <p>
+                  Traveling, cycling, hiking, meditation, and mindfulness —
+                  pursuing inner peace alongside technical excellence.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="glass-card section-card">
+          <h2 class="section-title">
+            <i class="bi bi-chat-dots-fill"></i> Get In Touch
+          </h2>
+          <div class="section-content">
+            <address class="contact-wrapper" style="font-style: normal;">
+              <aside class="contact-info glass-inner-card">
+                <h3>Contact Information</h3>
+                <div class="contact-items">
+                  <div class="contact-item">
+                    <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                    <a href="mailto:eric.johnson.dev123@gmail.com"
+                      >eric.johnson.dev123@gmail.com</a
+                    >
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-globe2" aria-hidden="true"></i>
+                    <a href="https://Eric-Johnson-1.github.io/Portfolio" target="_blank" rel="noopener noreferrer">Eric-Johnson-1.github.io/Portfolio</a>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <a
+                      href="https://github.com/Eric-Johnson-1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >github.com/Eric-Johnson-1</a
+                    >
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    <span>Remote — Available Worldwide</span>
+                  </div>
+                </div>
+              </aside>
+              <aside class="contact-cta glass-inner-card">
+                <h3>Let's Build Together</h3>
+                <p>
+                  I'm always interested in discussing Web3 projects, smart
+                  contract architecture, and opportunities to build impactful
+                  decentralized applications.
+                </p>
+                <p>
+                  Whether you're looking for a full-stack Web3 engineer or want
+                  to collaborate on an open-source project, feel free to reach
+                  out!
+                </p>
+                <a
+                  href="mailto:eric.johnson.dev123@gmail.com"
+                  class="glass-button cta-button"
+                >
+                  <i class="bi bi-envelope-fill" aria-hidden="true"></i> Send an Email
+                </a>
+              </aside>
+            </address>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="glass-card" role="contentinfo">
+        <div class="footer-content">
+          <div class="footer-text">
+            <p>&copy; <time datetime="2026">2026</time> Eric Johnson. Building the decentralized future.</p>
+          </div>
+          <nav class="social-links" aria-label="Social media">
+            <a href="https://github.com/Eric-Johnson-1" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="bi bi-github" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:eric.johnson.dev123@gmail.com" aria-label="Email">
+              <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+            </a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript (Deferred & Unified) -->
+    <script src="script.js" defer></script>
+  </body>
+</html>

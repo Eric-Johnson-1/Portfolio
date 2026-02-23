@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Johnson - Web3 Full-Stack Engineer Resume</title>
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Screen Viewing Theme (Light Cyber Aesthetic) */
+            --bg-body: #FAFAFC;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --primary: #7c3aed;
+            --accent: #06b6d4;
+            --border: #e2e8f0;
+        }
+
+        /* Essential Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text-main);
+            background: var(--bg-body);
+            line-height: 1.6;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Container designed to dynamically fill screen while maintaining A4 print safety */
+        .resume-container {
+            width: 75%;
+            max-width: 1400px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 50px 5%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--primary) 20%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Section Headings */
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            color: var(--primary);
+            margin: 25px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+
+        /* Content Blocks */
+        .summary p { margin-bottom: 10px; }
+        
+        .skills p { margin-bottom: 8px; }
+        
+        .experience-item, .project-item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .date, .link-right {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .role-desc {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 18px;
+            margin-bottom: 5px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Typography Emphasis matching Markdown */
+        strong {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        /* Download Button */
+        .pdf-download-wrapper {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .pdf-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(124, 58, 237, 0.05);
+            color: var(--primary);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .pdf-download-btn:hover {
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
+        }
+
+        /* =========================================
+           Print Specific CSS (Ensures PDF Perfection)
+           ========================================= */
+        @media print {
+            @page {
+                size: A4;
+                margin: 15mm 15mm 15mm 15mm;
+            }
+
+            body {
+                background: none;
+                font-size: 11pt; /* Better print readability */
+            }
+
+            .resume-container {
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            h1 {
+                /* Strip gradients for clean print vector rendering if desired, 
+                   but Webkit browsers print gradients fine. We keep it Dark for contrast. */
+                background: none;
+                -webkit-text-fill-color: #000;
+                color: #000;
+            }
+
+            h2 { color: #3b82f6; /* Fallback safe blue for headers if printing in color */ }
+            
+            strong { color: #000; }
+            a { color: #2563eb; text-decoration: none; }
+            
+            /* Prevent headers from detaching from their content */
+            h2, .item-header, h3 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+            
+            /* Let li naturally break across pages if extremely long */
+            li {
+                page-break-inside: auto;
+                break-inside: auto;
+            }
+
+            /* Hide the download button when printing to PDF */
+            .pdf-download-wrapper {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-container">
+    
+    <header>
+        <h1>Eric Johnson</h1>
+        <div class="contact-info">
+            <a href="mailto:eric.johnson.dev123@gmail.com">eric.johnson.dev123@gmail.com</a>
+            <span>|</span>
+            <a href="https://Eric-Johnson-1.github.io/Portfolio" target="_blank" rel="noopener noreferrer">https://Eric-Johnson-1.github.io/Portfolio</a>
+            <span>|</span>
+            <a href="https://github.com/Eric-Johnson-1" target="_blank" rel="noopener noreferrer">https://github.com/Eric-Johnson-1</a>
+        </div>
+    </header>
+
+    <section class="summary">
+        <h2>Summary</h2>
+        <p>Web3 Full-Stack Software Engineer who has <strong>architected 30+ Solidity smart contracts</strong> and <strong>shipped 4+ production-grade dApps</strong> across DeFi, NFT, DAO governance, and healthcare. Backed by strictly enforced security standards, establishing <strong>100% on-chain core mechanics verification</strong> via comprehensive <strong>Foundry</strong> test suites (<strong>650+ invariant and fuzz tests</strong>). 3+ years of remote Web3 experience spanning <strong>EIP-7201 UUPS-upgradeable contract systems</strong>, <strong>ERC-4337 Account Abstraction</strong> with gasless onboarding, and <strong>ERC-5192 Soulbound Token</strong> architectures, plus 2 years of Web2 full-stack development. Deep expertise in building <strong>censorship-resistant systems</strong> (Merkle proof + IPFS anti-censorship), <strong>on-chain governance</strong> (Governor + Timelock + quadratic funding), and <strong>gas-optimized</strong> storage layouts. Seeking to bring end-to-end blockchain engineering depth to a team building impactful, <strong>user-centric</strong> decentralized infrastructure.</p>
+    </section>
+
+    <section class="skills">
+        <h2>Technical Skills</h2>
+        <p><strong>Blockchain & Smart Contracts:</strong> Solidity, Foundry, OpenZeppelin, UUPS Proxy (EIP-7201 Namespaced Storage), ERC-4337 (Account Abstraction — Smart Account + Paymaster + Factory), ERC-5192 (Soulbound Tokens), ERC-7821 (Batched Execution), ERC-1271 (On-chain Signature Validation), ERC-721A, EIP-712 (Typed Data Signatures), ERC-1155, ERC-20, Create2 Deterministic Deployment, Merkle Proof Verification, Quadratic Funding (CLR), DAO Governance, Gas Optimization, NFT Marketplace Architecture</p>
+        <p><strong>Frontend & Wallet Integration:</strong> TypeScript, Next.js (App Router), React, Wagmi, Viem, RainbowKit, ConnectKit, Tailwind CSS, Radix UI, Framer Motion, Zustand, TanStack Query</p>
+        <p><strong>Backend & Infrastructure:</strong> Bun, Hono, Node.js, Express.js, Drizzle ORM, PostgreSQL, MongoDB, The Graph (Subgraph), IPFS, Upstash Redis, Docker, Zod (Schema Validation)</p>
+        <p><strong>Tools & DevOps:</strong> Turborepo (Monorepo), Git, GitHub Actions (CI/CD), Satori + Sharp (Dynamic SVG → PNG/WebP Rendering)</p>
+    </section>
+
+    <section class="experience">
+        <h2>Experience</h2>
+        
+        <div class="experience-item">
+            <div class="item-header">
+                <h3>Web3 Full-Stack Software Engineer | Remote - Bianjie.AI</h3>
+                <span class="date">2023.02 - present</span>
+            </div>
+            <div class="role-desc">Core developer on a production enterprise-grade IDO (Initial DEX Offering) platform with staking-based allocation, LP yield farming, and on-chain token vesting. Turborepo monorepo across 4 workspaces (web, api, contracts, subgraph) running on Bun.</div>
+            <ul>
+                <li>Architected 5 UUPS-upgradeable Solidity smart contracts (SalesFactory, Sale, AllocationStaking, FarmingNBL, Vesting) with <strong>EIP-7201</strong> namespaced storage layouts, ReentrancyGuard, and Pausable emergency circuit-breakers — enabling upgrade-safe infrastructure with <strong>zero storage collision risk</strong>.</li>
+                <li>Engineered a Create2 deterministic clone deployment system via `Clones.cloneDeterministic`, enabling <strong>predictable Sale contract addresses before deployment</strong> and <strong>gas-efficient factory-pattern</strong> IDO launches.</li>
+                <li>Designed a Merkle proof + IPFS anti-censorship whitelist architecture: backend generates Merkle trees, uploads complete whitelist JSON to IPFS, and stores <strong>roots on-chain</strong>. Frontend implements TanStack Query <strong>dual-source fallback</strong> (API → IPFS + on-chain root), ensuring <strong>100% trustless participation</strong> even if the centralized backend goes offline.</li>
+                <li>Built a MasterChef V2-style LP farming contract (`FarmingNBL`) with multi-pool support, time-weighted reward accumulation, external `IRewarder` plugin interface, duplicate LP token detection, and <strong>balance-capped safe distribution</strong>.</li>
+                <li>Implemented per-user Vesting contract deployment on token claim: Sale contract dynamically deploys individual `Vesting` contracts with configurable linear release schedules, SafeERC20 transfers, and <strong>owner-recoverable `recoverERC20`</strong> for accidentally sent tokens.</li>
+                <li>Developed the <strong>Hono + Drizzle ORM backend</strong> (TypeScript/Bun) with RESTful project CRUD, IPFS upload pipeline, Zod schema validation, and PostgreSQL persistence with `onConflictDoUpdate` upsert resolution for atomic snapshot updates.</li>
+                <li>Implemented on-chain safety invariant checks: Sale contract verifies `IERC20.balanceOf(address(this)) >= tokensSold + tokensToBuy` (C5), and `withdrawLeftoverTokens` uses **`min(unsold, balance)` safe withdrawal pattern** (H2).</li>
+                <li>Deployed a <strong>Graph Protocol subgraph</strong> indexing 4 entity types with `@derivedFrom` reverse-lookup relationships — replacing expensive on-chain enumeration with real-time event-indexed queries.</li>
+                <li>Built the <strong>Next.js frontend</strong> with Wagmi / Viem for <strong>type-safe</strong> contract interactions, reactive on-chain state updates, and managed Docker Compose for PostgreSQL and environment-driven chain configuration.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="item-header">
+                <h3>Web3 Full-Stack Software Engineer | Remote - TheOne.art</h3>
+                <span class="date">2022.02 - 2023.02</span>
+            </div>
+            <ul>
+                <li>Engineered a high-performance NFT marketplace supporting primary issuance and secondary trading, leveraging <strong>ERC721A</strong> to achieve <strong>gas-optimized</strong> batch minting operations.</li>
+                <li>Architected a decentralized order book using <strong>EIP-712</strong> typed data signatures, enabling gasless off-chain maker order placements with <strong>atomic on-chain taker matching</strong>.</li>
+                <li>Developed comprehensive <strong>Subgraph (The Graph)</strong> indexing for complex marketplace events (listings, bids, sales), <strong>reducing</strong> frontend query <strong>latency</strong> by removing on-chain RPC bottlenecks.</li>
+                <li>Designed an automated <strong>hybrid storage pipeline</strong> utilizing <strong>IPFS</strong> for decentralized metadata pinning combined with a robust <strong>Node.js/Express.js</strong> backend.</li>
+                <li>Implemented diverse wallet standard support with Ethers.js, driving <strong>strict security patterns</strong> including `ReentrancyGuard` and <strong>pull-over-push</strong> fund distribution mechanisms.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Personal Projects</h2>
+        
+        <div class="project-item">
+            <div class="item-header">
+                <h3>💚 HopeDAO — Decentralized Mutual Aid Crowdfunding DAO</h3>
+                <a href="https://github.com/Eric-Johnson-1/HopeDAO" target="_blank" rel="noopener noreferrer" class="link-right">GitHub</a>
+            </div>
+            <div class="role-desc">A full-stack DAO platform on <strong>Base L2</strong> enabling transparent, community-governed mutual aid crowdfunding with milestone-based fund release and quadratic funding matching.</div>
+            <ul>
+                <li>Architected 14 Solidity source files across 5 modules: core campaign management, DAO governance, ERC-20 governance token, <strong>ERC-1155 Soulbound</strong> NFTs, and an <strong>ERC-4337 Account Abstraction</strong> system.</li>
+                <li>Engineered a full <strong>ERC-4337 smart account stack</strong>: `HopeAccount` (UUPS + <strong>ERC-7821</strong> batched execution + <strong>ERC-1271</strong> off-chain signature validation) + Factory (Create2) + Paymaster (per-user daily limits, exact `postOp` gas refunds).</li>
+                <li>Implemented <strong>quadratic funding (CLR matching)</strong> algorithm in a Solidity library using Babylonian-method integer `sqrt` with 1e18 fixed-point precision.</li>
+                <li>Designed a <strong>verifier staking & reputation system</strong> (`VerifierRegistry`) with automated cooldowns, governance slash functions, and on-chain reputation scoring.</li>
+                <li>Built milestone-based fund release with <strong>IPFS evidence submission</strong>, DAO vote verification, and treasury fee deduction (max 10%).</li>
+                <li>Achieved <strong>249 tests passing</strong> (10 suites, including invariant and fuzz tests) with <strong>Foundry</strong>, covering Governor proposals, Paymaster validation, and slashing scenarios.</li>
+                <li><strong>Tech:</strong> Solidity · Foundry · ERC-4337 · Next.js · Wagmi · Viem · Hono · Drizzle ORM · PostgreSQL · Bun</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="item-header">
+                <h3>💉 MedBadge — Blockchain Vaccination Record SBT System</h3>
+                <a href="https://github.com/Eric-Johnson-1/MedBadge" target="_blank" rel="noopener noreferrer" class="link-right">GitHub</a>
+            </div>
+            <div class="role-desc">A decentralized vaccination record management platform turning immunization records into tamper-proof <strong>Soulbound Tokens (ERC-5192)</strong> on <strong>Base L2</strong> with GDPR-compliant privacy architecture.</div>
+            <ul>
+                <li>Engineered a <strong>storage-slot-optimized</strong> `VaccinationRecord` struct packing 5 fields into 35 bytes / 2 EVM storage slots, achieving <strong>~60% gas savings</strong> versus naïve `uint256` implementations.</li>
+                <li>Designed a hybrid on-chain/off-chain architecture with AES-256-GCM encryption for PII on IPFS, fully <strong>GDPR-compliant</strong> via unpin + key destruction for the right to erasure.</li>
+                <li>Implemented <strong>ERC-5192 Soulbound semantics</strong> by overriding `_update()` to block transfers, emitting `Locked` events, achieving ERC-721 compatibility without transferability.</li>
+                <li>Built a <strong>two-tier institution-based registrar management</strong> system (`Ownable2Step`): Phase 2 delegates to admins with automatic registrar deactivation via cascading `active` flags.</li>
+                <li>Engineered batch revocation (up to 200/tx) utilizing `delete revocationReason` to <strong>reclaim storage slots and earn Gas refunds</strong>, maintaining a full on-chain audit trail.</li>
+                <li>Built dynamic badge rendering via Satori + Sharp (SVG → PNG/WebP). Integrated <strong>The Graph</strong>, intentionally omitting ERC-721 Enumerable to <strong>save ~20,000 gas per mint</strong>.</li>
+                <li>Achieved <strong>119 tests passing</strong> (unit + invariant + fuzz) with <strong>Foundry</strong>.</li>
+                <li><strong>Tech:</strong> Solidity · Foundry · ERC-5192 · ERC-721 · Next.js · Wagmi · Hono · Bun · The Graph · IPFS</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="community">
+        <h2>Community & Interests</h2>
+        <ul>
+            <li>Active contributor in Web3 Discord communities (Foundry, OpenZeppelin, ERC-4337) discussing smart contract security, account abstraction patterns, and L2 scaling architecture.</li>
+            <li>Building and open-sourcing full-stack dApps on GitHub, with a focus on gas-optimized Solidity patterns (struct packing, custom errors, storage-reclaim techniques) and modern TypeScript tooling (Bun, Hono, Drizzle ORM).</li>
+            <li>Exploring emerging token standards (ERC-5192, ERC-7821) and decentralized governance mechanisms (quadratic funding, milestone-based fund release, verifier staking/slashing).</li>
+            <li>Enjoy traveling, cycling, hiking, meditation, and mindfulness.</li>
+        </ul>
+    </section>
+
+    <!-- PDF Download Link (Hidden on Print) -->
+    <div class="pdf-download-wrapper">
+        <a href="./Eric-Johnson-RemoteWeb3FullStackDeveloper-Resume.pdf" class="pdf-download-btn" target="_blank" download>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Download PDF Version
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
